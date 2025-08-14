@@ -3,6 +3,7 @@ import ticTacToe from "../media/tic-tac-toe.png";
 import functionSelector from "../media/function-selector-creator.png";
 import poolreader from "../media/poolreader.png";
 import zeni from "../media/zeni.png";
+import aiAgent from "../media/ai-agent.png";
 import { SocialIcon } from "react-social-icons";
 import { PROJECTS_LINK } from "../links.ts";
 
@@ -14,6 +15,52 @@ const Projects: React.FC = () => {
         <span className="px-4 text-sm tracking-widest text-gray-500 uppercase font-bold z-10 bg-white">
           Projects
         </span>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="md:order-2">
+          <h3 className="text-xl font-semibold mb-2 flex items-center">
+            Uniswap v4 AI Agent
+            <div className="px-2">
+              <SocialIcon
+                url={PROJECTS_LINK.AI_AGENT_LINK}
+                target="_blank"
+                className="transition-transform duration-200 hover:scale-110"
+                bgColor="black"
+                style={{ height: 35, width: 35 }}
+              />
+            </div>
+          </h3>
+
+          <ul className="list-disc pl-5 space-y-1">
+            <li>
+              Telegram AI agent for interacting with Uniswap v4 protocol
+              contracts.
+            </li>
+            <li>
+              Users can get the data from StateView and PositionManager
+              contracts (pool keys, pool liquidity, pool state, position info).
+            </li>
+            <li>
+              The agent is chain-agnostic and supports all 14 chains on which
+              Uniswap is live.
+            </li>
+            <li>
+              Future upgrades: managing pools and positions (creating pools,
+              making swaps, adding/removing liquidity, etc.).
+            </li>
+            <li className="list-inside font-bold">
+              Stack: ElizaOS, TypeScript, viem, Gemini.
+            </li>
+          </ul>
+        </div>
+        <div className="flex items-center justify-center">
+          <img
+            src={aiAgent}
+            alt="Telegram AI Agent"
+            className="rounded-lg shadow-md w-64"
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
